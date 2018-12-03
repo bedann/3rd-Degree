@@ -502,9 +502,9 @@ function checkLogin(){
     if(!uid){
         window.location.replace('login.html');
     }else{
-        // loadUser(uid);
-        // loadPosts();
-        // loadChats();
+        loadUser(uid);
+        loadPosts();
+        loadChats();
     }
     console.log('checking login');
 
