@@ -66,7 +66,9 @@ body{
     z-index: 1;
 }
 
-.navbar .btn{
+
+.new-post{
+    display: block;
     margin-right: 3em;
     margin-left: 1em;
 }
@@ -355,6 +357,7 @@ body{
     .main-grid{
         margin-left: 0%;
         margin-right: 0%;
+        width: 94%;
     }
 
     .main-search{
@@ -382,15 +385,35 @@ body{
     }
 
 
+    .dropbtn {
+        margin-right: 2em;
+    }
 
+    .navbar{
+        background-color: white;
+        color: black;
+    }
+
+    .app-title{
+        color: black;
+    }
     
     #comments-modal .modal-content{
         max-width: 100%;
     }
 
+    #comments-list{
+        height: 50vh;
+    }
+
     
     .modal-content {
         width: 80%;
+    }
+
+
+    .new-post{
+        display: none;
     }
 
 }

@@ -63,12 +63,16 @@ body{
     position: absolute;
     background-color: rgba(133, 108, 0, 0.294);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.login-img h1{
+.main-title{
     color:white;
-    font-size: 80px;
+    font-size: 380%;
     margin: 1em;
+    margin-top: -1em;
     line-height: 0.9em;
 }
 
@@ -105,6 +109,10 @@ body{
 .actions{
     padding: 3em;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
 }
 
 .actions h1{
@@ -112,14 +120,19 @@ body{
     margin-top: 0em;
 }
 
-.actions span{
+.actions .pmp{
     opacity: 0.6;
 }
 
 
 
+.logo{
+    display: none;
+}
+
 form{
     margin-top: 1em;
+    width: 85%;
 }
 
 
@@ -127,20 +140,20 @@ form{
 .group 			  { 
     position:relative; 
     margin-bottom:15px; 
-  }
-  input 				{
-      background-color: transparent;
+}
+input{
+    background-color: transparent;
     font-size:18px;
     padding:10px 10px 10px 5px;
     display:block;
-    width:300px;
+    width:100%;
     border:none;
     border-bottom:1px solid #757575;
-  }
-  input:focus 		{ outline:none; }
+}
+input:focus{ outline:none; }
   
   /* LABEL ======================================= */
-  label 				 {
+label 				 {
     color:#999; 
     font-size:18px;
     font-weight:normal;
@@ -151,18 +164,18 @@ form{
     transition:0.2s ease all; 
     -moz-transition:0.2s ease all; 
     -webkit-transition:0.2s ease all;
-  }
+}
   
   /* active state */
-  input:focus ~ label, input:valid ~ label 		{
+input:focus ~ label, input:valid ~ label 		{
     top:-8px;
     font-size:14px;
     color:#5264AE;
-  }
+}
   
   /* BOTTOM BARS ================================= */
-  .bar 	{ position:relative; display:block; width:300px; }
-  .bar:before, .bar:after 	{
+.bar 	{ position:relative; display:block; width:100%; }
+.bar:before, .bar:after 	{
     content:'';
     height:2px; 
     width:0;
@@ -172,21 +185,21 @@ form{
     transition:0.2s ease all; 
     -moz-transition:0.2s ease all; 
     -webkit-transition:0.2s ease all;
-  }
-  .bar:before {
+}
+.bar:before {
     left:50%;
-  }
-  .bar:after {
+}
+.bar:after {
     right:50%; 
-  }
+}
   
   /* active state */
-  input:focus ~ .bar:before, input:focus ~ .bar:after {
+input:focus ~ .bar:before, input:focus ~ .bar:after {
     width:50%;
-  }
+}
   
   /* HIGHLIGHTER ================================== */
-  .highlight {
+.highlight {
     position:absolute;
     height:60%; 
     width:100px; 
@@ -194,7 +207,7 @@ form{
     left:0;
     pointer-events:none;
     opacity:0.5;
-  }
+}
   
   /* active state */
   input:focus ~ .highlight {
@@ -223,7 +236,7 @@ form{
     cursor: pointer;
     border-width: 0;
     outline: none;
-    border-radius: 45px;
+    border-radius: 5px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
     
     background-color: #27ae60;
@@ -244,6 +257,12 @@ form{
 
 .btns{
       margin-top: 0.5em;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .title-2{
+      display: none;
   }
 
 
@@ -294,5 +313,70 @@ form{
     font-family: 'Roboto',arial,sans-serif;
 }
 
+@media(max-width:1000px){
+    .content{
+        width: 80%;
+    }
+}
+
   
-  
+  @media(max-width:900px){
+      .content{
+          width: 100%;
+          display: inline;
+      }
+
+      .login-img{
+          display: none;
+      }
+
+      .main{
+          width: 100%;
+      }
+
+      .main::before{
+        filter: blur(3px);
+        -webkit-filter: blur(3px);
+      }
+
+      .content{
+          width: 100%;
+          min-width: 100%;
+          margin: 0px;
+          color: white;
+          position: inherit;
+          background-color: #000;
+      }
+
+    .actionable{
+          width: 100%;
+          position: inherit;
+          background-color: transparent;
+    }
+
+    .actions .btns{
+            display: flex;
+            flex-direction: column;
+    }
+
+    .actions .sign-in{
+        border-radius: 5px;
+    }
+
+    
+    .logo{
+        display: block;
+    }
+
+    
+    .title-2{
+        display: block;
+        font-size: 40px;
+    }
+
+    .login-pmp{
+        font-size: 20px;
+    }
+
+
+  }
